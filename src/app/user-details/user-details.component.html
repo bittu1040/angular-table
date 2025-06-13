@@ -1,0 +1,13 @@
+@if (user) {
+  <div class="details-container">
+    <div class="header">
+      <button class="back-button" (click)="goBack()">← Back to List</button>
+      <h2>User Details</h2>
+    </div>
+    <div class="user-details">
+      @for (field of fields; track field) {
+          <div class="field-label">{{ field }}: {{ user[field] }}</div>
+      }
+    </div>
+  </div>
+}

@@ -1,0 +1,20 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        @for (header of headers; track header) {
+          <th>{{ header }}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of users; track user) {
+        <tr (click)="viewDetails(user)">
+          @for (header of headers; track header) {
+            <td>{{ user[header] }}</td>
+          }
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
