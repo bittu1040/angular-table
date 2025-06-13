@@ -4,7 +4,7 @@
 }
 
 table {
-  width: 100%;
+  min-width: 100%;
   border-collapse: collapse;
   background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -14,4 +14,24 @@ th, td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+}
+
+.view-details{
+    white-space: nowrap;
+}
+
+.cell-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 8px;
+  
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  
+  &:focus {
+    outline: 2px solid #007bff;
+    background-color: #fff;
+  }
 }

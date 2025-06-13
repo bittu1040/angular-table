@@ -5,14 +5,24 @@
         @for (header of headers; track header) {
           <th>{{ header }}</th>
         }
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       @for (user of users; track user) {
-        <tr (click)="viewDetails(user)">
+        <tr>
           @for (header of headers; track header) {
-            <td>{{ user[header] }}</td>
+            <td><input 
+                type="text" 
+                [(ngModel)]="user[header]" 
+                class="cell-input"
+              ></td>
           }
+           <td>
+            <button class="btn btn-primary view-details" (click)="viewDetails(user)">
+              View Details
+            </button>
+          </td>
         </tr>
       }
     </tbody>
